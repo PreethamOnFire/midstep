@@ -21,7 +21,7 @@ function TestModuleButtonList({testlist}){
       <h2>{heading}</h2>
       {testlist.map(test =>
         <button className={styles.testButton}>
-          <p>{test.name}</p>
+          {test.name}
         </button>
       )}
     </>
@@ -33,9 +33,11 @@ export default function Home() {
   let obj1 = new TestObj("Gay", "Preetham");
   let obj2 = new TestObj("Gay", "Preetham");
   let obj3 = new TestObj("Gay", "Preetham");
+  let obj4 = new TestObj("Gay", "Preetham");
   Tests.push(obj1);
   Tests.push(obj2);
   Tests.push(obj3);
+  Tests.push(obj4);
   return (
     <>
     <div className={styles.MainGrid}>
