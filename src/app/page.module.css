@@ -1,0 +1,42 @@
+.MainGrid {
+    display: grid;
+    grid-template-columns: 200px auto;
+    height: 100vh;
+}
+
+.NavBar {
+    grid-column: 1;
+    background-color: black;
+    text-align: center;
+    overflow: scroll;
+    border-top-right-radius: 10%;
+    border-color: #64a7b8;
+    border-right-width: 5px;
+    border-top-width: 30px;
+}
+
+.content{
+    grid-column: 2;
+    background-color: black;
+}
+
+.color {
+    color: #e7ebec;
+}
+
+.frame {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 200px;
+}
+
+.title {
+    text-align: left;
+    font-size: 30px;
+}
+
+.logo {
+    color: #64a7b8;
+    font-size: 30px;
+}
