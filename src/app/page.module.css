@@ -12,7 +12,7 @@
     border-top-right-radius: 10%;
     border-color: #64a7b8;
     border-right-width: 5px;
-    border-top-width: 30px;
+    /* border-top-width: 30px;*/
     grid-template-rows: 200px auto;
 }
 
@@ -20,6 +20,8 @@
     grid-column: 2;
     background-color: black;
     grid-template-rows: 200px auto;
+    border-top-left-radius: 5%;
+    /*border-top-right-radius: 5%;*/
 }
 
 .color {
@@ -34,7 +36,7 @@
 }
 
 .title {
-    text-align: left;
+    text-align: center;
     font-size: 30px;
     grid-row: 1;
 }

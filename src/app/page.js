@@ -4,7 +4,6 @@ import React from 'react';
 import {Tests,TestObj} from "./Links"
 
 
-
 function TestModuleButtonList({testlist, onswitchTest}) {
   const count = testlist.length; 
   let heading = "";
@@ -47,8 +46,8 @@ export default function Home() {
     <>
     <div className={styles.MainGrid}>
       <div className={styles.NavBar}>
-        <p className={styles.logo}>LOGO</p>
-      <TestModuleButtonList className={styles.testButtonList} testlist={Tests} onswitchTest={switchTest}/>
+        <img src='/logo.ico' alt='logo'/>
+        <TestModuleButtonList className={styles.testButtonList} testlist={Tests} onswitchTest={switchTest}/>
       </div>
       <div className={styles.content}>
         <header className={styles.title}>K-12 APP</header>
