@@ -13,11 +13,13 @@
     border-color: #64a7b8;
     border-right-width: 5px;
     border-top-width: 30px;
+    grid-template-rows: 200px auto;
 }
 
 .content{
     grid-column: 2;
     background-color: black;
+    grid-template-rows: 200px auto;
 }
 
 .color {
@@ -34,9 +36,31 @@
 .title {
     text-align: left;
     font-size: 30px;
+    grid-row: 1;
 }
 
 .logo {
+    grid-row: 1;
     color: #64a7b8;
     font-size: 30px;
+}
+
+/*Button styles*/
+
+.testButtonList{
+    grid-row: 2;
+}
+
+.testButton{
+    width: 150px;
+    height: 50px;
+    background-color: #282828;
+    border: #64a7b8;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.testText{
+    color: #64a7b8;
 }
