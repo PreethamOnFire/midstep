@@ -1,34 +1,26 @@
 'use client'
 import styles from "./page.module.css";
 import React from 'react';
-
-
-class TestObj {
-  constructor(name, author) {
-      this.name = name;
-      this.author = author;
-  }
-}
+import {Tests,TestObj} from "./Links"
 
 
 
-function TestModuleButtonList({testlist}){
+function TestModuleButtonList({testlist, onswitchTest}) {
   const count = testlist.length; 
   let heading = "";
   if (count > 0) {
     const noun = count > 1 ? 'Tests' : 'Test';
-    heading = count + ' ' + noun;
+    heading = `${count} ${noun}`;
   }
-  function switchTest(test){
-  }
+
   return (
     <>
       <h2>{heading}</h2>
-      {testlist.map(test =>
-        <button className={styles.testButton} onClick={switchTest(test)}>
+      {testlist.map((test) => (
+        <button key={test.id} className={styles.testButton} onClick={() => onswitchTest(test)}>
           <p>{test.name}</p>
         </button>
-      )}
+      ))}
     </>
   );
 }
@@ -47,20 +39,16 @@ function TestViewer({test}){
 }
 
 export default function Home() {
-  let Tests = [];
-  let obj1 = new TestObj("Gay", "Preetham");
-  let obj2 = new TestObj("gooooo", "Preetham");
-  let obj3 = new TestObj("heheheh", "Preetham");
-  Tests.push(obj1);
-  Tests.push(obj2);
-  Tests.push(obj3);
-  const [content, setContent] = React.useState(<TestViewer test = {obj1}/>);
+  const [content, setContent] = React.useState("Welcome to MidStep!");
+  function switchTest(test) {
+    return (setContent(<TestViewer test={test} />)); // Pass the test object directly
+  }
   return (
     <>
     <div className={styles.MainGrid}>
       <div className={styles.NavBar}>
         <p className={styles.logo}>LOGO</p>
-      <TestModuleButtonList className={styles.testButtonList} testlist = {Tests}/>
+      <TestModuleButtonList className={styles.testButtonList} testlist={Tests} onswitchTest={switchTest}/>
       </div>
       <div className={styles.content}>
         <header className={styles.title}>K-12 APP</header>
