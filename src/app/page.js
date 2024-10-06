@@ -4,6 +4,7 @@ import React from 'react';
 import {Tests,TestObj} from "./Links"
 import Image from "next/image";
 import appName from './Midstep.png';
+import ex from './KindergardenIHS.pdf';
 
 
 function TestModuleButtonList({testlist, onswitchTest}) {
@@ -27,6 +28,7 @@ function TestModuleButtonList({testlist, onswitchTest}) {
 }
 
 function TestViewer({test}){
+  var feedback = "Submit your test fro feedback";
   return(
     <>
       <div className={styles.testVeiwerContainer}>
@@ -38,18 +40,23 @@ function TestViewer({test}){
             {test.author}
           </h2>
         </div>
-        <div>
-          <h1>Upload File</h1>
-          <form method="post" encType="multipart/form-data">
-            <input type="file" name="file" />
-            <input type="submit" value="Upload" />
-          </form>
-        </div>
         <div className={styles.testContainer}>
-          <iframe src = "https://en.wikipedia.org/wiki/Wikipedia" className={styles.frame}></iframe>
+          <iframe src = {ex} className={styles.frame}></iframe>
           <div className={styles.feedbackContainer}>
             <div className={styles.feedback}>
-
+              <h2 className={styles.feedbackTitle}>
+                Feedback
+              </h2>
+              <div className={styles.feedbackTextContainer}>
+                <p>{feedback}</p>
+              </div>
+              <div className={styles.testUpload}>
+                <h3>Upload File</h3>
+                <form method="post" encType="multipart/form-data">
+                  <input type="file" name="file" />
+                  <input type="submit" value="Upload" />
+                </form>
+              </div>
             </div>
           </div>
         </div>
