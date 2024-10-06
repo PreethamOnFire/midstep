@@ -29,15 +29,30 @@ function TestModuleButtonList({testlist, onswitchTest}) {
 function TestViewer({test}){
   return(
     <>
-    <div className={styles.testTitleContainer}>
-      <h1 className={styles.testTitle}>
-        {test.name}
-      </h1>
-    </div>
-    <h2 className={styles.author}>
-      {test.author}
-    </h2>
-    <iframe src = "https://en.wikipedia.org/wiki/Wikipedia" className={styles.frame}></iframe>
+      <div className={styles.testVeiwerContainer}>
+        <div className={styles.testTitleContainer}>
+          <h1 className={styles.testTitle}>
+            {test.name}
+          </h1>
+          <h2 className={styles.author}>
+            {test.author}
+          </h2>
+        </div>
+        <div className={styles.testContainer}>
+          <iframe src = "https://en.wikipedia.org/wiki/Wikipedia" className={styles.frame}></iframe>
+          <div className={styles.feedbackContainer}>
+            <div className={styles.feedback}>
+
+            </div>
+          </div>
+        </div>
+        <div className={styles.tagContainer}>
+          <div classname={styles.tags}>
+
+          </div>
+        </div>
+        
+      </div>
     </>
   );
 }
