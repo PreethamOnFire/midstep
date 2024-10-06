@@ -4,7 +4,6 @@ import React from 'react';
 import {Tests,TestObj} from "./Links"
 import Image from "next/image";
 import appName from './Midstep.png';
-import ex from './KindergardenIHS.pdf';
 
 
 function TestModuleButtonList({testlist, onswitchTest}) {
@@ -17,10 +16,10 @@ function TestModuleButtonList({testlist, onswitchTest}) {
 
   return (
     <>
-      <h2>{heading}</h2>
+      <h2 className={styles.testButtonHeader}>{heading}</h2>
       {testlist.map((test) => (
         <button key={test.id} className={styles.testButton} onClick={() => onswitchTest(test)}>
-          <p>{test.name}</p>
+          <p className={styles.testButtonText}>{test.name}</p>
         </button>
       ))}
     </>
@@ -28,7 +27,7 @@ function TestModuleButtonList({testlist, onswitchTest}) {
 }
 
 function TestViewer({test}){
-  var feedback = "Submit your test fro feedback";
+  var feedback = "Submit your test for feedback";
   return(
     <>
       <div className={styles.testVeiwerContainer}>
@@ -41,7 +40,7 @@ function TestViewer({test}){
           </h2>
         </div>
         <div className={styles.testContainer}>
-          <iframe src = {ex} className={styles.frame}></iframe>
+          <iframe src = {test.path} className={styles.frame}></iframe>
           <div className={styles.feedbackContainer}>
             <div className={styles.feedback}>
               <h2 className={styles.feedbackTitle}>
