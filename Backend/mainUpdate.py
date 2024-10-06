@@ -2,10 +2,9 @@ from extract_answers import extract_answers
 # from free_check_answers import grade_test_bert
 from check_students import grade_test
 from create_pdf import load_jsonl, create_pdf, save_answers
+import argparse
 
-
-def main():
-    json_file = 'train.jsonl'
+def main(json_file):
     questions, answers = load_jsonl(json_file)
 
     indices_to_include = range(0,12)
@@ -21,7 +20,7 @@ def main():
     # read_file = 'page_read.txt'
     # output_folder = 'cropped_images'  
     box_file = "loc_cache.txt"
-    open(box_file, 'w')
+    open(box_file, 'w').close()
 
     student_answers = extract_answers(pdf_file, box_file)
 
@@ -35,4 +34,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Process a JSONL file.")
+    parser.add_argument("json_file", type=str, help="Path to the JSONL file")
+    args = parser.parse_args()
+    
+    main(args.json_file)
+    

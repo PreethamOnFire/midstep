@@ -4,10 +4,10 @@ import subprocess
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = 'uploads'
+Student_Upload = 'Student_Upload'
 ALLOWED_EXTENSIONS = {'pdf', 'txt', 'png', 'jpg', 'jpeg', 'gif'}
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['Backend/Student_Upload'] = Student_Upload
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -23,14 +23,14 @@ def upload_file():
             return 'No selected file'
         if file and allowed_file(file.filename):
             filename = file.filename
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            file.save(os.path.join(app.config['Backend/Student_Upload'], filename))
             
             # Run the Python script with the filename as an argument
-            result = subprocess.run(['python', 'process_file.py', filename], capture_output=True, text=True)
+            result = subprocess.run(['python3', 'mainUpdate.py', filename], capture_output=True, text=True)
             
             return f'File uploaded and processed. Result: {result.stdout}'
     return render_template('upload.html')
 
 if __name__ == '__main__':
-    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+    os.makedirs(Student_Upload, exist_ok=True)
     app.run(debug=True)
