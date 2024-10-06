@@ -10,7 +10,6 @@ def load_jsonl_test(jsonl_file):
     with open(jsonl_file, 'r') as f:
         for line in f:
             entry = json.loads(line.strip())
-            # Append question and answer to their respective lists
             questions.append(entry.get("question"))
             answers.append(entry.get("answer"))
     
@@ -34,7 +33,7 @@ def create_pdf(selected_questions, pdf_file, crete_folder):
     locations = []
     pdf.set_auto_page_break(auto=True, margin=15)
     
-    # Add the first page
+
     pdf.add_page()    
 
     pdf.set_font("Arial", size=10)
@@ -42,7 +41,7 @@ def create_pdf(selected_questions, pdf_file, crete_folder):
     pdf.cell(0, 10, datetime.now().strftime('%m/%d/%Y'), ln=True, align='R')
     pdf.ln(3)  
 
-    # Title
+
     pdf.set_font("Arial", 'B', size=16)
     pdf.cell(0, 10, pdf_file, ln=True, align='C')
     pdf.ln(5) 
@@ -52,7 +51,6 @@ def create_pdf(selected_questions, pdf_file, crete_folder):
         pdf.multi_cell(0, 10, f"{i}. {q}")
         pdf.rect((pdf.get_x()), (pdf.get_y()), 180, 30)
         
-        # Store the location as a tuple of (page number, y-coordinate)
         locations.append((pdf.page, pdf.get_y()))
         pdf.ln(30) 
 
@@ -60,11 +58,11 @@ def create_pdf(selected_questions, pdf_file, crete_folder):
     pdf_path = os.path.join(crete_folder, pdf_file)
     pdf.output(pdf_path)
 
-    # Write the locations to the cache file
+
     cache_answer_loc = 'loc_cache.txt'
     with open(cache_answer_loc, 'w') as f:
         for page, loc in locations:
-            f.write(f'{page}, {loc:.6f}\n')  # Format loc to six decimal places
+            f.write(f'{page}, {loc:.6f}\n') 
 
 def save_answers(selected_questions, answers_file, crete_folder):
 
