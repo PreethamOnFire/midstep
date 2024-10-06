@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MidStep
 
-## Getting Started
+Our team's submission for [InnovateK12](https://innovatek12.devpost.com) 
 
-First, run the development server:
+![Site Dashboard View](public/MidstepDashboard.PNG)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tested Environment
+Downloaded Node.js version: 22.9.0
+Downloaded npm version: 10.8.3
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To Run The application
+npm run dev or pnpm dev
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Our Team
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[Soham Jain](https://github.com/J8Soham)
+[Preetham Buddhi] (https://github.com/PreethamOnFire)
+[Vani Singhal]()
+[Arjun Taneja](https://github.com/Arjun83-png)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [GeistMonoVF]
+- [Inter-Italic](https://fonts.google.com/specimen/Inter): CC0
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Libraries
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [pytesseract](https://pypi.org/project/pytesseract/)
+- [numpy](https://numpy.org)
+- [fpdf](http://www.fpdf.org): Unlicense
+- [MemoryPack](https://github.com/Cysharp/MemoryPack): MIT
