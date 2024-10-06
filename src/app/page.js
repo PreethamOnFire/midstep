@@ -53,7 +53,7 @@ export default function Home() {
       </div>
       <div className={styles.content}>
         <div className={styles.titleContainer}>
-          <header className={styles.title}>K-12 APP</header>
+          <header className={styles.title}>MID-STEP</header>
         </div>
         {content}
       </div>
