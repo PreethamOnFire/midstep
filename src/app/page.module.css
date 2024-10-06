@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+
 .MainGrid {
     display: grid;
     grid-template-columns: 200px auto;
@@ -9,7 +12,7 @@
     background-color: black;
     text-align: center;
     overflow: scroll;
-    border-top-right-radius: 10%;
+    /*border-top-right-radius: 10%;*/
     border-color: #64a7b8;
     border-right-width: 5px;
     /* border-top-width: 30px;*/
@@ -20,7 +23,7 @@
     grid-column: 2;
     background-color: black;
     grid-template-rows: 200px auto;
-    border-top-left-radius: 5%;
+    /*border-top-left-radius: 5%;*/
     /*border-top-right-radius: 5%;*/
 }
 
@@ -33,12 +36,18 @@
     height: 500px;
     position: relative;
     left: 200px;
+    overflow: scroll;
 }
 
 .title {
     text-align: center;
     font-size: 30px;
+}
+
+.titleContainer {
     grid-row: 1;
+    height: 20px;
+    width: auto;
 }
 
 .logo {
@@ -69,4 +78,24 @@
 
 .testText{
     color: #64a7b8;
+}
+
+/*MainContent Styles*/
+.testTitleContainer {
+    height: 50px;
+    width: auto;
+    margin-top: 30px;
+}
+
+.testTitle {
+    font-size: 50px;
+    color: #64a7b8;
+    font-weight: bolder;
+    text-align: center;
+    font-family: "Inter";
+}
+
+.author{
+    text-align: center;
+    margin-top: 25px;
 }

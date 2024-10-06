@@ -27,10 +27,12 @@ function TestModuleButtonList({testlist, onswitchTest}) {
 function TestViewer({test}){
   return(
     <>
-    <h1>
-      {test.name}
-    </h1>
-    <h2>
+    <div className={styles.testTitleContainer}>
+      <h1 className={styles.testTitle}>
+        {test.name}
+      </h1>
+    </div>
+    <h2 className={styles.author}>
       {test.author}
     </h2>
     </>
@@ -50,7 +52,9 @@ export default function Home() {
         <TestModuleButtonList className={styles.testButtonList} testlist={Tests} onswitchTest={switchTest}/>
       </div>
       <div className={styles.content}>
-        <header className={styles.title}>K-12 APP</header>
+        <div className={styles.titleContainer}>
+          <header className={styles.title}>K-12 APP</header>
+        </div>
         {content}
       </div>
     </div>
