@@ -135,6 +135,22 @@
     margin-left: 60px;
 }
 
+.feedbackTitle{
+    font-size: 20px;
+    color: #64a7b8;
+    text-align: center;
+}
+
+.feedbackTextContainer{
+    margin-left: 20px;
+    margin-top: 10px;
+    min-height: 500px;
+}
+
+.testUpload {
+    margin-left: 20px;
+}
+
 .tagContainer{
     grid-row: 3;
     display: flex;
