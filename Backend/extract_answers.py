@@ -72,3 +72,4 @@ def extract_answers(pdf_file, box_file, output_folder=None, read_file=None):
 #             # if answer_text.strip():
 #             #     with open(read_file, 'a') as f:
 #             #         f.write(answer_text + "\n\n")
+

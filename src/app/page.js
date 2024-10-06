@@ -38,6 +38,13 @@ function TestViewer({test}){
             {test.author}
           </h2>
         </div>
+        <div>
+          <h1>Upload File</h1>
+          <form onSubmit={handleSubmit} method="post" encType="multipart/form-data">
+            <input type="file" name="file" />
+            <input type="submit" value="Upload" />
+          </form>
+        </div>
         <div className={styles.testContainer}>
           <iframe src = "https://en.wikipedia.org/wiki/Wikipedia" className={styles.frame}></iframe>
           <div className={styles.feedbackContainer}>
