@@ -2,8 +2,7 @@
 
 Our team's submission for [InnovateK12](https://innovatek12.devpost.com) 
 
-![Site Dashboard View](public/Mid<img width="1241" alt="MidstepDashboard" src="https://github.com/user-attachments/assets/05a24aa8-c974-4575-a14b-0adc814369be">
-stepDashboard.PNG)
+<img width="1241" alt="MidstepDashboard" src="https://github.com/user-attachments/assets/64bfc47d-1117-4623-9913-c0905adb91e1">
 
 ## Tested Environment
 Downloaded Node.js version: 22.9.0
