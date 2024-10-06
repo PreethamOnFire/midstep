@@ -17,14 +17,13 @@
     border-right-width: 5px;
     /* border-top-width: 30px;*/
     grid-template-rows: 200px auto;
+    height: auto;
 }
 
 .content{
     grid-column: 2;
     background-color: black;
     grid-template-rows: 200px auto;
-    /*border-top-left-radius: 5%;*/
-    /*border-top-right-radius: 5%;*/
 }
 
 .color {
@@ -32,11 +31,9 @@
 }
 
 .frame {
-    width: 500px;
+    width: 60%;
     height: 500px;
-    position: relative;
-    left: 200px;
-    overflow: scroll;
+    margin-left: 30px;
 }
 
 .title {
@@ -48,6 +45,8 @@
     grid-row: 1;
     height: 20px;
     width: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
@@ -84,18 +83,23 @@
 .testTitleContainer {
     height: 50px;
     width: auto;
-    margin-top: 30px;
+    margin-top: 100px;
+    margin-left: 25px;
 }
 
 .testTitle {
     font-size: 50px;
     color: #64a7b8;
     font-weight: bolder;
-    text-align: center;
+    text-align: left;
     font-family: "Inter";
 }
-
 .author{
-    text-align: center;
+    text-align: left;
     margin-top: 25px;
+    margin-left: 25px;
+    font-weight: bolder;
+    color: #64a7b8;
+    font-size: 30px;
 }
+

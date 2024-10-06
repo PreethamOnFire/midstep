@@ -2,6 +2,8 @@
 import styles from "./page.module.css";
 import React from 'react';
 import {Tests,TestObj} from "./Links"
+import Image from "next/image";
+import appName from './Midstep.png';
 
 
 function TestModuleButtonList({testlist, onswitchTest}) {
@@ -35,12 +37,13 @@ function TestViewer({test}){
     <h2 className={styles.author}>
       {test.author}
     </h2>
+    <iframe src = "https://en.wikipedia.org/wiki/Wikipedia" className={styles.frame}></iframe>
     </>
   );
 }
 
 export default function Home() {
-  const [content, setContent] = React.useState("Welcome to MidStep!");
+  const [content, setContent] = React.useState("");
   function switchTest(test) {
     return (setContent(<TestViewer test={test} />)); // Pass the test object directly
   }
@@ -53,7 +56,7 @@ export default function Home() {
       </div>
       <div className={styles.content}>
         <div className={styles.titleContainer}>
-          <header className={styles.title}>MID-STEP</header>
+          <header className={styles.title}><Image src={appName} alt="Midstep" width={400} height={200}/></header>
         </div>
         {content}
       </div>
